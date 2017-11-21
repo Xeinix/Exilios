@@ -28,13 +28,7 @@ namespace Exilios
         static void Main(string[] args)
         {
             msgGood(progName + " is running. Version: v." + progVer);
-            msg("For list of availiable commands, please check github.com/xeinix/exilios");
-            /* Put back in after the console is written.
-            bot = new TwitchChatBot();
-            bot.Connect();
-            Console.ReadLine(); // Replace with a built in console system later for interesting with twitch chat.
-            bot.Disconnect();
-            */             
+            msg("For list of availiable commands, please check github.com/xeinix/exilios");         
             while (isRunning)
             {
                 command = prompt(":> ");
@@ -44,8 +38,11 @@ namespace Exilios
                 else if (command == "twitchconnect") twitchConnect();
                 else if (command == "twitchdisconnect") twitchDisconnect();
                 else if (command == "exit") exit();
+                else if (command == "clear") clear();
+                else if (command == "twitchchat") twitchChat();
+
                 else msgError("No command found! Please try again.");
-            }
+            } // Console Command Window
 
 
         }
@@ -103,9 +100,34 @@ namespace Exilios
             }
             else msgError("Either the bot is already stopped or has not been created yet.");
         }
+        static void clear()
+        {
+            Console.Clear();
+        }
         static void exit()
         {
             isRunning = false;
+        }
+        static void twitchChat()
+        {
+            if (isBotRunning)
+            {
+                msgGood("In Chat Mode. To send a message to chat press 't' to get out, press any other key.");
+                bool chatEnabled = true;
+                while (chatEnabled)
+                {
+                    bot.setChatEnabled(true);
+                    ConsoleKeyInfo d = Console.ReadKey();
+                    if (d.KeyChar == 't')
+                    {
+                        bot.SendMessage(prompt("\n Enter Message: "));
+
+                    }
+                    else chatEnabled = false;
+                    bot.setChatEnabled(false);
+                }
+            }
+            else msgError("Twitch bot not enabled. Can't access chat.");
         }
 #endregion
 

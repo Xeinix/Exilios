@@ -13,6 +13,7 @@ namespace Exilios
 
         readonly ConnectionCredentials credentials = new ConnectionCredentials(TwitchCredentials.botUsername, TwitchCredentials.botToken);
         TwitchClient client;
+        static bool isChatEnabled = false;
 
         internal void Connect()
         {
@@ -37,7 +38,7 @@ namespace Exilios
 
         private void clientOnMessageReceived(object sender, OnMessageReceivedArgs e)
         {
-            msg(e.ChatMessage.DisplayName + ": " +e.ChatMessage.Message);
+            if (isChatEnabled) msg(e.ChatMessage.DisplayName + ": " +e.ChatMessage.Message);
             if(e.ChatMessage.Message.StartsWith("hi", StringComparison.InvariantCultureIgnoreCase))
             {
                 client.SendMessage($"Hey there {e.ChatMessage.DisplayName}.");
@@ -57,6 +58,16 @@ namespace Exilios
         internal void Disconnect()
         {
             msg("Disconnecting");
+        }
+
+        public void setChatEnabled(bool e)
+        {
+            isChatEnabled = e;
+        }
+
+        public void SendMessage(string m)
+        {
+            client.SendMessage(m);
         }
 
         #region Message Methods
