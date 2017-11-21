@@ -64,24 +64,28 @@ namespace Exilios
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
             Console.WriteLine(m);
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         static void msgError(string m)
         {
             Console.ForegroundColor = ConsoleColor.Red;
             Console.WriteLine(m);
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         static void msg(string m)
         {
             Console.ForegroundColor = ConsoleColor.White;
             Console.WriteLine(m);
+            Console.ForegroundColor = ConsoleColor.White;
         }
 
         static void msgGood(string m)
         {
             Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine(m);
+            Console.ForegroundColor = ConsoleColor.White;
         }
         #endregion
     }

@@ -61,7 +61,7 @@ namespace Exilios {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Grab Your Own.
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string botToken {
             get {
@@ -88,7 +88,7 @@ namespace Exilios {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Again, get your own..
+        ///   Looks up a localized string similar to .
         /// </summary>
         internal static string clientId {
             get {
