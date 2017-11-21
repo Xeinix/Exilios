@@ -1,0 +1,11 @@
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Debug\Exilios.exe.config
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Debug\Exilios.exe
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Debug\Exilios.pdb
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Debug\SuperSocket.ClientEngine.dll
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Debug\TwitchLib.dll
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Debug\WebSocket4Net.dll
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Debug\Exilios.csprojResolveAssemblyReference.cache
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Debug\Exilios.exe
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Debug\Exilios.pdb
