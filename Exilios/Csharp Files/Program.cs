@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using Exilios.Resources;
 using Exilios.Windows_Forms;
 #endregion
 
@@ -43,6 +44,7 @@ namespace Exilios
         [STAThread]
         static void Main(string[] args)
         {
+            
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             msgGood(progName + " is running. Version: v." + progVer);
