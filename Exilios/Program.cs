@@ -3,12 +3,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Forms;
+using Microsoft.Win32;
 #endregion
 
 namespace Exilios
 {
     class Program
     {
+
+        #region Registry Stuff.
+        static RegistryKey reg = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Exilios");
+
+        static String regIsConfig = "isConfig";
+        static String regBotToken = "botToken";
+        static String regClientId = "clientId";
+        #endregion
+
         #region Program Management Variables
         public static string progName = "Exilios Bot Suite";
         public static double progVer = 0.3;
@@ -25,12 +36,15 @@ namespace Exilios
         static TwitchChatBot bot;
         #endregion
 
+        [STAThread]
         static void Main(string[] args)
         {
             msgGood(progName + " is running. Version: v." + progVer);
             msg("For list of availiable commands, please check github.com/xeinix/exilios");         
             while (isRunning)
             {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
                 command = prompt(":> ");
                 command = command.ToLower();
                 if (command == "istwitchrunning") isTwitchBotRunning();
@@ -40,6 +54,11 @@ namespace Exilios
                 else if (command == "exit") exit();
                 else if (command == "clear") clear();
                 else if (command == "twitchchat") twitchChat();
+                else if (command == "config") config();
+
+                // Remove before release
+                else if (command == "regreset") regReset();
+                else if (command == "regset") regSet();
 
                 else msgError("No command found! Please try again.");
             } // Console Command Window
@@ -106,6 +125,7 @@ namespace Exilios
         }
         static void exit()
         {
+            if (isBotCreated) bot.Disconnect();
             isRunning = false;
         }
         static void twitchChat()
@@ -129,7 +149,20 @@ namespace Exilios
             }
             else msgError("Twitch bot not enabled. Can't access chat.");
         }
+        static void config()
+        {
+            msgError("Config Window Not Created! isConfig=" + reg.GetValue("isConfig", null));
+        }
 #endregion
+
+        static void regReset()
+        {
+            reg.SetValue("isConfig", false);
+        }
+        static void regSet()
+        {
+            reg.SetValue("isConfig", true);
+        }
 
         #region Message Methods
         static void msgWarn(string m)

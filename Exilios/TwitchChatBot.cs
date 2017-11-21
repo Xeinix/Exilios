@@ -1,4 +1,5 @@
 ﻿using System;
+using Microsoft.Win32;
 #region TwitchLib using tags.
 using TwitchLib;
 using TwitchLib.Models.Client;
@@ -10,7 +11,7 @@ namespace Exilios
 {
     internal class TwitchChatBot
     {
-
+        static RegistryKey reg = Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Exilios");
         readonly ConnectionCredentials credentials = new ConnectionCredentials(TwitchCredentials.botUsername, TwitchCredentials.botToken);
         TwitchClient client;
         static bool isChatEnabled = false;
