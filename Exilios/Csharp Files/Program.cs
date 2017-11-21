@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Windows.Forms;
 using Microsoft.Win32;
 using Exilios.Resources;
@@ -143,6 +144,7 @@ namespace Exilios
         {
             if (isBotRunning)
             {
+                clear();
                 msgGood("In Chat Mode. To send a message to chat press 't' to get out, press any other key.");
                 bool chatEnabled = true;
                 while (chatEnabled)

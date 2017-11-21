@@ -1,5 +1,8 @@
-﻿using System;
+﻿#region System Using Tags
+using System;
 using Microsoft.Win32;
+using System.Threading;
+#endregion
 #region TwitchLib using tags.
 using TwitchLib;
 using TwitchLib.Models.Client;
@@ -32,7 +35,16 @@ namespace Exilios
         static bool isChatEnabled = false;
         #endregion
         #endregion
-        
+
+        #region Threading Stuff.
+        static Thread threadRepeatMessage;
+        static bool isThreadCreated = false;
+        static bool isThreadRunning = false;
+
+
+
+        #endregion
+
         #region Event Handlers
         private void clientOnConnected(object sender, OnConnectedArgs e)
         {
@@ -93,7 +105,11 @@ namespace Exilios
         }
         #endregion
 
+
+
         #region Command Methods
+
+
         internal void Connect()
         {
             msg("Connecting");
@@ -106,6 +122,16 @@ namespace Exilios
                 client.OnMessageReceived += clientOnMessageReceived;
                 client.OnConnected += clientOnConnected;
                 client.OnUserJoined += clientOnUserJoined;
+                 /*
+                if (!isThreadCreated)
+                {
+                    threadRepeatMessage = new Thread(new ThreadStart(RepeatMessage));
+                }
+                if (!isThreadRunning)
+                {
+                    threadRepeatMessage.Start();
+                }
+                */
             }
             catch (Exception h)
             {
@@ -156,6 +182,8 @@ namespace Exilios
             Console.ForegroundColor = ConsoleColor.White;
         }
         #endregion
+
+
     }
 
 }

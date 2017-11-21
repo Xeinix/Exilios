@@ -1,0 +1,14 @@
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Release\Exilios.exe.config
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Release\Exilios.exe
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Release\Exilios.pdb
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Release\Newtonsoft.Json.dll
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Release\SuperSocket.ClientEngine.dll
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Release\TwitchLib.dll
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Release\WebSocket4Net.dll
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\bin\Release\Newtonsoft.Json.xml
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.csprojResolveAssemblyReference.cache
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.Resources.TwitchCredentials.resources
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.Windows_Forms.Configuration.resources
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.csproj.GenerateResource.Cache
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.exe
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.pdb
