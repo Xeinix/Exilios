@@ -5,6 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using Microsoft.Win32;
+using Exilios.Windows_Forms;
 #endregion
 
 namespace Exilios
@@ -18,6 +19,9 @@ namespace Exilios
         static String regIsConfig = "isConfig";
         static String regBotToken = "botToken";
         static String regClientId = "clientId";
+        static String regBotUsername = "botUsername";
+        static String regChannelName = "botChannelName";
+        static String regConnectOL = "connectOnLaunch";
         #endregion
 
         #region Program Management Variables
@@ -39,12 +43,12 @@ namespace Exilios
         [STAThread]
         static void Main(string[] args)
         {
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
             msgGood(progName + " is running. Version: v." + progVer);
             msg("For list of availiable commands, please check github.com/xeinix/exilios");         
             while (isRunning)
             {
-                Application.EnableVisualStyles();
-                Application.SetCompatibleTextRenderingDefault(false);
                 command = prompt(":> ");
                 command = command.ToLower();
                 if (command == "istwitchrunning") isTwitchBotRunning();
@@ -89,15 +93,20 @@ namespace Exilios
         }
         static void twitchRun()
         {
-            if (!isBotCreated)
+
+            if (reg.GetValue(regIsConfig, null) != null)
             {
-                bot = new TwitchChatBot();
-                isBotCreated = true;
-                bot.Connect();
-                isBotRunning = true;
-                System.Threading.Thread.Sleep(1200);
+                if (!isBotCreated)
+                {
+                    bot = new TwitchChatBot();
+                    isBotCreated = true;
+                    bot.Connect();
+                    isBotRunning = true;
+                    System.Threading.Thread.Sleep(1200);
+                }
+                else msgError("The bot is already created. Please run 'twitchConnect' to connect to Twitch.");
             }
-            else msgError("The bot is already created. Please run 'twitchConnect' to connect to Twitch.");
+            else msgError("You have not configured Exilios yet. Please run 'config'.");
         }
         static void twitchConnect()
         {
@@ -152,6 +161,7 @@ namespace Exilios
         static void config()
         {
             msgError("Config Window Not Created! isConfig=" + reg.GetValue("isConfig", null));
+            Application.Run(new Configuration());
         }
 #endregion
 

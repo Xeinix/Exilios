@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace Exilios {
+namespace Exilios.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace Exilios {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Exilios.TwitchCredentials", typeof(TwitchCredentials).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("Exilios.Resources.TwitchCredentials", typeof(TwitchCredentials).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
