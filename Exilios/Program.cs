@@ -11,12 +11,21 @@ namespace Exilios
     {
         #region Program Management Variables
         public static string progName = "Exilios";
-        public static double progVer = 0.1;
+        public static double progVer = 0.2;
         #endregion
 
         static void Main(string[] args)
         {
-            TwitcChatBot bot = new TwitchChatBot();
+            msgGood(progName + " is alive! Version: v." + progVer);
+            
+            TwitchChatBot bot = new TwitchChatBot();
+            bot.Connect();
+            Console.ReadLine(); // Replace with a built in console system later for interesting with twitch chat.
+            bot.Disconnect();
+            
+
+
+
         }
         
         #region Message Methods
