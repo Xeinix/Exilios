@@ -49,7 +49,13 @@ namespace Exilios
         private void clientOnConnected(object sender, OnConnectedArgs e)
         {
             msgGood("Connected To Twitch Chat!");
+            Console.Title = "Exilios State: Connected";
             client.SendMessage("ExiliosBot is alive! Muhahaha");
+        }
+        private void clientOnDisconnected(object sender, OnDisconnectedArgs e)
+        {
+            msgError("Disconnected from Twitch chat!");
+            Console.Title = "Exilios State: Disconnected";
         }
         private void clientOnMessageReceived(object sender, OnMessageReceivedArgs e)
         {
@@ -122,6 +128,7 @@ namespace Exilios
                 client.OnMessageReceived += clientOnMessageReceived;
                 client.OnConnected += clientOnConnected;
                 client.OnUserJoined += clientOnUserJoined;
+                client.OnDisconnected += clientOnDisconnected;
                  /*
                 if (!isThreadCreated)
                 {

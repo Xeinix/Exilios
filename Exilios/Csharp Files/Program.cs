@@ -28,7 +28,7 @@ namespace Exilios
 
         #region Program Management Variables
         public static string progName = "Exilios Bot Suite";
-        public static double progVer = 0.3;
+        public static double progVer = 0.4;
         #endregion
 
         #region Console Vars
@@ -45,7 +45,7 @@ namespace Exilios
         [STAThread]
         static void Main(string[] args)
         {
-            
+            Console.Title = "Exilios State: Disconnected";
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             msgGood(progName + " is running. Version: v." + progVer);
@@ -72,7 +72,7 @@ namespace Exilios
 
 
         }
-
+        
         #region Command Methods
         static string prompt(string m)
         {
