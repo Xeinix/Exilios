@@ -75,6 +75,12 @@
     <Compile Include="Windows Forms\Configuration.Designer.cs">
       <DependentUpon>Configuration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Windows Forms\ExiliosGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Windows Forms\ExiliosGUI.Designer.cs">
+      <DependentUpon>ExiliosGUI.cs</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -87,6 +93,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Windows Forms\Configuration.resx">
       <DependentUpon>Configuration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Windows Forms\ExiliosGUI.resx">
+      <DependentUpon>ExiliosGUI.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

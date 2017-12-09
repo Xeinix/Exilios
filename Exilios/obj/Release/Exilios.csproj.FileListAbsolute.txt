@@ -12,3 +12,4 @@ C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.Wi
 C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.csproj.GenerateResource.Cache
 C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.exe
 C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.pdb
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Release\Exilios.Windows_Forms.ExiliosGUI.resources

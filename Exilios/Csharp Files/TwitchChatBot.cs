@@ -67,17 +67,32 @@ namespace Exilios
             if(e.ChatMessage.Message.Equals("!itch", StringComparison.InvariantCultureIgnoreCase))
             {
                 if (isChatEnabled) msgGood("Sending Itch.io information");
-                client.SendMessage($"Itch.io: xeinix.ml");
+                client.SendMessage($"Itch.io: itch.xeinix.me");
             }
             if (e.ChatMessage.Message.Equals("!twitter", StringComparison.InvariantCultureIgnoreCase))
             {
                 if (isChatEnabled) msgGood("Sending Twitter information");
-                client.SendMessage($"Twitter: @Xeinix");
+                client.SendMessage($"Twitter: @Xeinix twitter.xeinix.me");
             }
-            if (e.ChatMessage.Message.Equals("!instagram", StringComparison.InvariantCultureIgnoreCase))
+            if (e.ChatMessage.Message.Equals("!insta", StringComparison.InvariantCultureIgnoreCase))
             {
                 if (isChatEnabled) msgGood("Sending Instagram information");
-                client.SendMessage($"Instagram: @XeinixOfficial");
+                client.SendMessage($"Instagram: @XeinixOfficial insta.xeinix.me");
+            }
+            if (e.ChatMessage.Message.Equals("!donate", StringComparison.InvariantCultureIgnoreCase))
+            {
+                if (isChatEnabled) msgGood("Sending Donation information");
+                client.SendMessage($"Donate: http://donate.xeinix.me");
+            }
+            if (e.ChatMessage.Message.Equals("!site", StringComparison.InvariantCultureIgnoreCase) || e.ChatMessage.Message.Equals("!website", StringComparison.InvariantCultureIgnoreCase))
+            {
+                if (isChatEnabled) msgGood("Sending Site information");
+                client.SendMessage($"Website: http://xeinix.me");
+            }
+            if (e.ChatMessage.Message.Equals("!youtube", StringComparison.InvariantCultureIgnoreCase) || e.ChatMessage.Message.Equals("!website", StringComparison.InvariantCultureIgnoreCase))
+            {
+                if (isChatEnabled) msgGood("Sending YouTube information");
+                client.SendMessage($"Youtube: http://yt.xeinix.me");
             }
             if (e.ChatMessage.Message.Equals("!commands", StringComparison.InvariantCultureIgnoreCase))
             {

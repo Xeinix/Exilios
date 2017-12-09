@@ -12,3 +12,4 @@ C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Debug\Exilios.pdb
 C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Debug\Exilios.csproj.GenerateResource.Cache
 C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Debug\Exilios.Resources.TwitchCredentials.resources
 C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Debug\Exilios.Windows_Forms.Configuration.resources
+C:\Users\Zachary Seebeck\Documents\GitHub\Exilios\Exilios\obj\Debug\Exilios.Windows_Forms.ExiliosGUI.resources
